@@ -1,7 +1,3 @@
-import "./App.css";
-import DropDown from "./components/dropdown/DropDown";
-import { Link, Outlet } from "react-router-dom";
-import PersistentDrawerLeft from "./components/dropdown/DropDown2";
 import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -70,7 +66,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-function App() {
+export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -125,17 +121,15 @@ function App() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Testing", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <Link to={text}>
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            </Link>
+          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
           ))}
         </List>
         <Divider />
@@ -154,11 +148,7 @@ function App() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        {/* Content goes here */}
-        <Outlet />
       </Main>
     </Box>
   );
 }
-
-export default App;

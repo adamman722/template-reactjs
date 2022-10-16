@@ -1,0 +1,15 @@
+.nav-container {
+  background-color: aqua;
+  width: 13rem;
+}
+.nav-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  list-style-type: none;
+  padding: 5px;
+  margin: 0;
+}
+
+/*# sourceMappingURL=output.css.map */
