@@ -126,7 +126,7 @@ function App() {
         <Divider />
         {/* to play with background colors to list add "sx={styles that you want }" */}
         <List sx={{ backgroundColor: "Pink" }}>
-          {["Elements", "Starred", "Send email", "Drafts"].map(
+          {["Elements", "Testing", "Send email", "Drafts"].map(
             (text, index) => (
               <Link to={text}>
                 <ListItem key={text} disablePadding>
