@@ -33,6 +33,9 @@ function Form() {
             id="user_confirm_password"
           />
         </div>
+        <div>
+          <button type="submit">Sign up</button>
+        </div>
       </form>
     </div>
   );
