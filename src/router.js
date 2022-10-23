@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import App from "./App";
 import DropDown from "./components/dropdown/DropDown";
-import Form from "./components/testingGround/Form";
+import Form from "./components/testingGround/Form/Form";
 
 const router = createBrowserRouter([
   {
