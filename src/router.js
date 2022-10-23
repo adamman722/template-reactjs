@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     //to make new paths we use children instead of routs this time
     children: [
       { path: "Elements", element: <DropDown /> },
-      { path: "Testing", element: <Form /> },
+      { path: "Form", element: <Form /> },
     ],
   },
 ]);

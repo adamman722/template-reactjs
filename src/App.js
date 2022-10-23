@@ -126,23 +126,21 @@ function App() {
         <Divider />
         {/* to play with background colors to list add "sx={styles that you want }" */}
         <List sx={{ backgroundColor: "Pink" }}>
-          {["Elements", "Testing", "Send email", "Drafts"].map(
-            (text, index) => (
-              <Link to={text}>
-                <ListItem key={text} disablePadding>
-                  <ListItemButton>
-                    <ListItemIcon>
-                      {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                    </ListItemIcon>
-                    <ListItemText primary={text} />
-                  </ListItemButton>
-                </ListItem>
-              </Link>
-            )
-          )}
+          {["Elements", "Form", "Send email", "Drafts"].map((text, index) => (
+            <Link to={text} key={text}>
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+          ))}
         </List>
         <Divider />
-        <List>
+        {/* <List>
           {["All mail", "Trash", "Spam"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
@@ -153,7 +151,7 @@ function App() {
               </ListItemButton>
             </ListItem>
           ))}
-        </List>
+        </List> */}
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
